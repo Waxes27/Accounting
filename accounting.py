@@ -1,14 +1,15 @@
 from user import authentication
-from user import journal
+from transactions import journal
+from banking import reconciliation
 
 
 def run_app():
     amount = 100.00
 
-    print("[{}] User Authentication loaded.".format("Module"))
     authentication.authenticate_user()
-    journal.recieve_income(amount)
+    journal.receive_income(amount)
     journal.pay_expense(amount)
+    reconciliation.do_reconciliation()
 
 if __name__ == "__main__":
     run_app()
