@@ -17,12 +17,12 @@ def run_app():
     authentication.authenticate_user()
     journal.receive_income(amount)
     journal.pay_expense(amount)
-    reconciliation.do_reconciliation()
+    #reconciliation.do_reconciliation()
     fvbrecon.do_reconciliation()
     ubsarecon.do_reconciliation()
     response = requests.get("https://www.wethinkcode.co.za")
-    print(response.status_code)
     onlinebanking.do_reconciliation()
+    print(response.status_code)
 
 if __name__ == "__main__":
         run_app()

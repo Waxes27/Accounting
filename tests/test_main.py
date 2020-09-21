@@ -148,6 +148,7 @@ class MyTestCase(unittest.TestCase):
             importlib.reload(banking.online.reconciliation)
 
         output = out.getvalue().strip()
+        print(output)
         self.assertTrue(output.find('[Module] online.Reconciliation loaded.') > -1)
 
     def test_step7_module_banking_recon_online(self):
