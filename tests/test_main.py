@@ -126,7 +126,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual('Doing Unreal Bank of South Africa reconciliation.', output)
 
     def test_step6_argv(self):
-        out = subprocess.check_output('python3 solution/accounting.py hello world', shell=True)
+        out = subprocess.check_output('python3 accounting.py hello world', shell=True)
 
         output = out.decode("utf-8").strip()
         self.assertTrue(output.find('hello\nworld\n') > -1)
