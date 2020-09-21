@@ -86,10 +86,10 @@ if [ -x /usr/bin/dircolors ]; then
 
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-
     alias problems="cd ~/problems/"
     alias bashrc="gedit ~/.bashrc"
     alias g="stored;sleep 4;git add . && git commit -m '$git' && git push;wtc-lms save $uuid;sleep 4;exit"
+    alias code='bash ~/VSCode-linux-x64/bin/code'
     #alias s="wtc-lms save $uuid;sleep 4;exit"
     alias grade="wtc-lms grade $uuid; h"
     alias start="logins;wtc-lms start $uuid; problems; code ."
@@ -99,6 +99,7 @@ if [ -x /usr/bin/dircolors ]; then
     
 
 exercise uuid: $uuid'"
+    #alias bash="/bin/bash/"
     alias wtc-lms="~/Downloads/wtc-lms"
     alias alles="logins;stored;sleep 3;g;s;grade"
     #alias wtcl=""$password" && sleep 3| wtc-lms login"
