@@ -155,7 +155,7 @@ class MyTestCase(unittest.TestCase):
         import banking.online.reconciliation
         with captured_output() as (out, err):
             banking.online.reconciliation.do_reconciliation()
-
+        self.maxDiff = None
         output = out.getvalue().strip()
         self.assertEqual('Doing Online Bank reconciliation.\n200', output)
 
@@ -167,8 +167,8 @@ class MyTestCase(unittest.TestCase):
             self.fail("banking.fvb module NOT loaded")
 
     def test_step9_app_output(self):
-        out = subprocess.check_output('python3 solution/accounting.py', shell=True)
-
+        out = subprocess.check_output('python3 accounting.py', shell=True)
+        self.maxDiff = None
         output = out.decode("utf-8").strip()
         self.assertEqual("""[Package] User package loaded.
 [Module] User Authentication loaded.
