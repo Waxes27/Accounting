@@ -1,2 +1,2 @@
 print("[{}] Transactions package loaded.".format("Package"))
-print("[{}] Journal loaded.".format("Module") )
+#print("[{}] Journal loaded.".format("Module") )
